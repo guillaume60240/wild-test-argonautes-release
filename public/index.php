@@ -22,6 +22,7 @@ if (isset($_POST['name'])){
             $error = '<div class="alert alert-danger text-center">Merci de rentrer un nom valide !</div>';
         } else {
             $argonaute = createArgonaute($name, $db);
+            $argonautes = getAllArgonautes($db);
             $success = '<div class="alert alert-success text-center">L\' argonaute a bien été ajouté</div>';
         }
     } else{
